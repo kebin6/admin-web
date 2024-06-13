@@ -1,7 +1,7 @@
 node_modules
 node-jiti
 .DS_Store
-dist
+# dist
 .cache
 .turbo
 

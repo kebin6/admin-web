@@ -24,11 +24,11 @@ run-docker: # Run the docker image | 运行 docker 镜像
 help: # Show help | 显示帮助
 	@grep -E '^[a-zA-Z0-9 -]+:.*#'  Makefile | sort | while read -r l; do printf "\033[1;32m$$(echo $$l | cut -f 1 -d':')\033[00m:$$(echo $$l | cut -f 2- -d'#')\n"; done
 
-
-API_FILE=../wolflamp/wolflamp-api/desc/student.api
-FOLDER_NAME=
-PREFIX=
-SUB_FOLDER=
+SUB_FOLDER=banner
+API_FILE=../wolflamp/wolflamp-api/desc/${SUB_FOLDER}.api
+FOLDER_NAME=platform_management
+PREFIX=wl-api
+OVERWRITE=true
 .PHONY: gen-web
 gen-web:
-	goctls frontend vben --api_file=${API_FILE} --output=./ --folder_name=${FOLDER_NAME} --prefix=${PREFIX} --sub_folder=${SUB_FOLDER}
+	goctls frontend vben --api_file=${API_FILE} --output=./ --folder_name=${FOLDER_NAME} --prefix=${PREFIX} --sub_folder=${SUB_FOLDER} --overwrite=${OVERWRITE}

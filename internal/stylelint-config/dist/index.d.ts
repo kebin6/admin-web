@@ -1,0 +1,2 @@
+export * from "/Users/kebin/Workspace/Codes/wolflamp/admin-web/internal/stylelint-config/src/index";
+export { default } from "/Users/kebin/Workspace/Codes/wolflamp/admin-web/internal/stylelint-config/src/index";

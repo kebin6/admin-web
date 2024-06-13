@@ -1,0 +1,1 @@
+import{a as r}from"./entry/index-DvPJ5Vzs-1718250502895.js";const o=(e,s="notice")=>r.post({url:"/sys-api/email/send",params:e},{errorMessageMode:s,successMessageMode:s}),t=(e,s="notice")=>r.post({url:"/sys-api/sms/send",params:e},{errorMessageMode:s,successMessageMode:s});export{t as a,o as s};
