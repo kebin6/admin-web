@@ -11,6 +11,51 @@ export const columns: BasicColumn[] = [
   {
     title: t('platform_management.player.id'),
     dataIndex: 'id',
+    width: 50,
+  },
+  {
+    title: t('platform_management.player.email'),
+    dataIndex: 'email',
+    width: 200,
+  },
+  {
+    title: t('platform_management.player.rank'),
+    dataIndex: 'rank',
+    width: 80,
+  },
+  {
+    title: t('platform_management.player.amount'),
+    dataIndex: 'amount',
+    width: 80,
+  },
+  {
+    title: t('platform_management.player.invitedNum'),
+    dataIndex: 'invitedNum',
+    width: 80,
+  },
+  {
+    title: t('platform_management.player.totalIncome'),
+    dataIndex: 'totalIncome',
+    width: 80,
+  },
+  {
+    title: t('platform_management.player.inviteCode'),
+    dataIndex: 'inviteCode',
+    width: 80,
+  },
+  {
+    title: t('platform_management.player.lamb'),
+    dataIndex: 'lamb',
+    width: 80,
+  },
+  {
+    title: t('platform_management.player.depositAddress'),
+    dataIndex: 'depositAddress',
+    width: 100,
+  },
+  {
+    title: t('platform_management.player.systemCommission'),
+    dataIndex: 'systemCommission',
     width: 100,
   },
   {
@@ -24,59 +69,9 @@ export const columns: BasicColumn[] = [
     width: 100,
   },
   {
-    title: t('platform_management.player.name'),
-    dataIndex: 'name',
-    width: 100,
-  },
-  {
-    title: t('platform_management.player.rank'),
-    dataIndex: 'rank',
-    width: 100,
-  },
-  {
-    title: t('platform_management.player.usdt'),
-    dataIndex: 'usdt',
-    width: 100,
-  },
-  {
-    title: t('platform_management.player.invitedNum'),
-    dataIndex: 'invitedNum',
-    width: 100,
-  },
-  {
-    title: t('platform_management.player.totalIncome'),
-    dataIndex: 'totalIncome',
-    width: 100,
-  },
-  {
-    title: t('platform_management.player.profitAndLoss'),
-    dataIndex: 'profitAndLoss',
-    width: 100,
-  },
-  {
-    title: t('platform_management.player.recent100WinPercent'),
-    dataIndex: 'recent100WinPercent',
-    width: 100,
-  },
-  {
-    title: t('platform_management.player.inviteCode'),
-    dataIndex: 'inviteCode',
-    width: 100,
-  },
-  {
-    title: t('platform_management.player.inviterId'),
-    dataIndex: 'inviterId',
-    width: 100,
-  },
-  {
-    title: t('platform_management.player.invitedCode'),
-    dataIndex: 'invitedCode',
-    width: 100,
-  },
-  {
-    title: t('common.status'),
+    title: t('platform_management.player.status'),
     dataIndex: 'status',
-    width: 50,
+    width: 60,
     customRender: ({ record }) => {
       if (!Reflect.has(record, 'pendingStatus')) {
         record.pendingStatus = false;
@@ -109,31 +104,16 @@ export const searchFormSchema: FormSchema[] = [
 export const formSchema: FormSchema[] = [
   {
     field: 'id',
-    label: 'ID',
-    component: 'Input',
-    show: false,
-  },
-  {
-    field: 'id',
     label: t('platform_management.player.id'),
-    component: 'InputNumber',
+    component: 'Input',
     required: true,
+    componentProps: {
+      disabled: true,
+    },
   },
   {
-    field: 'createdAt',
-    label: t('platform_management.player.createdAt'),
-    component: 'InputNumber',
-    required: true,
-  },
-  {
-    field: 'updatedAt',
-    label: t('platform_management.player.updatedAt'),
-    component: 'InputNumber',
-    required: true,
-  },
-  {
-    field: 'name',
-    label: t('platform_management.player.name'),
+    field: 'email',
+    label: t('platform_management.player.email'),
     component: 'Input',
     required: true,
   },
@@ -144,8 +124,8 @@ export const formSchema: FormSchema[] = [
     required: true,
   },
   {
-    field: 'usdt',
-    label: t('platform_management.player.usdt'),
+    field: 'amount',
+    label: t('platform_management.player.amount'),
     component: 'InputNumber',
     required: true,
   },
@@ -156,39 +136,33 @@ export const formSchema: FormSchema[] = [
     required: true,
   },
   {
-    field: 'totalIncome',
-    label: t('platform_management.player.totalIncome'),
-    component: 'InputNumber',
-    required: true,
-  },
-  {
-    field: 'profitAndLoss',
-    label: t('platform_management.player.profitAndLoss'),
-    component: 'InputNumber',
-    required: true,
-  },
-  {
-    field: 'recent100WinPercent',
-    label: t('platform_management.player.recent100WinPercent'),
-    component: 'InputNumber',
-    required: true,
-  },
-  {
     field: 'inviteCode',
     label: t('platform_management.player.inviteCode'),
     component: 'Input',
     required: true,
   },
   {
-    field: 'inviterId',
-    label: t('platform_management.player.inviterId'),
+    field: 'invitedCode',
+    label: t('platform_management.player.invitedCode'),
+    component: 'Input',
+    required: true,
+  },
+  {
+    field: 'lamb',
+    label: t('platform_management.player.lamb'),
     component: 'InputNumber',
     required: true,
   },
   {
-    field: 'invitedCode',
-    label: t('platform_management.player.invitedCode'),
+    field: 'depositAddress',
+    label: t('platform_management.player.depositAddress'),
     component: 'Input',
+    required: true,
+  },
+  {
+    field: 'systemCommission',
+    label: t('platform_management.player.systemCommission'),
+    component: 'InputNumber',
     required: true,
   },
   {

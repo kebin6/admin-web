@@ -8,16 +8,18 @@ export interface PlayerInfo {
   createdAt?: number;
   updatedAt?: number;
   status?: number;
-  name?: string;
   rank?: number;
-  usdt?: number;
+  amount?: number;
   invitedNum?: number;
   totalIncome?: number;
-  profitAndLoss?: number;
   recent100WinPercent?: number;
   inviteCode?: string;
   inviterId?: number;
   invitedCode?: string;
+  lamb?: number;
+  depositAddress?: string;
+  systemCommission?: number;
+  email?: string;
 }
 
 /**

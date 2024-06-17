@@ -79,7 +79,7 @@
         showIndexColumn: false,
         clickToRowSelect: false,
         actionColumn: {
-          width: 30,
+          width: 100,
           title: t('common.action'),
           dataIndex: 'action',
           fixed: undefined,

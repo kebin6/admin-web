@@ -24,8 +24,8 @@ run-docker: # Run the docker image | 运行 docker 镜像
 help: # Show help | 显示帮助
 	@grep -E '^[a-zA-Z0-9 -]+:.*#'  Makefile | sort | while read -r l; do printf "\033[1;32m$$(echo $$l | cut -f 1 -d':')\033[00m:$$(echo $$l | cut -f 2- -d'#')\n"; done
 
-SUB_FOLDER=banner
-API_FILE=../wolflamp/wolflamp-api/desc/${SUB_FOLDER}.api
+SUB_FOLDER=player
+API_FILE=../wolflamp-api/desc/${SUB_FOLDER}.api
 FOLDER_NAME=platform_management
 PREFIX=wl-api
 OVERWRITE=true
