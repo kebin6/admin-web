@@ -105,7 +105,6 @@ export const formSchema: FormSchema[] = [
     field: 'id',
     label: t('platform_management.player.id'),
     component: 'Input',
-    required: true,
     componentProps: {
       disabled: true,
     },
