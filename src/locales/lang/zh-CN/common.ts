@@ -54,6 +54,7 @@ export default {
   audit: '审核中',
   // notification
   deleteConfirm: '是否确认删除？',
+  updateConfirm: '是否确认更新？',
   operateSuccess: '操作成功',
   operateFailed: '操作失败',
   updateSuccess: '更新成功',

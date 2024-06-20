@@ -54,6 +54,7 @@ export default {
   audit: 'Under review',
   // notification
   deleteConfirm: 'Confirm the deletion?',
+  updateConfirm: 'Confirm the update?',
   operateSuccess: 'Successful operation',
   operateFailed: 'The operation failed',
   updateSuccess: 'Update successfully',

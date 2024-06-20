@@ -219,6 +219,7 @@ export default {
     initOptional: '可选',
   },
   sys: {
+    overview: '数据总揽',
     version: '系统版本',
     Name: '系统名称',
     navigation: '快捷导航',

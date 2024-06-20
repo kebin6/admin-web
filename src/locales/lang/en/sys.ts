@@ -227,6 +227,7 @@ export default {
     initOptional: 'Optional',
   },
   sys: {
+    overview: 'Platform Overview',
     version: 'Version',
     Name: 'System Name',
     navigation: 'Navigation',
